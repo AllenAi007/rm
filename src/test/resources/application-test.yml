@@ -1,0 +1,15 @@
+spring:
+  profiles: dev
+  datasource:
+#    platform: h2
+    driverClassName: org.h2.Driver
+    # this is default url that spring-boot will load , if you change, those schemal.sql and data.sql in classpath will not work
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create
